@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './Components/Navbar/NavBar';
+import Home from './Components/Home/Home';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* <Provider store={store}> --> cuando agregue redux*/}
+      <Routes>
+        <Route
+          path={"/"}
+          element={<NavBar />}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route
+            path={"Home"}
+            element={<Home />}
+          />
+          <Route
+            path='*'
+            element={
+              <h1>404</h1>
+            }
+          />
+        </Route>
+      </Routes>
+      {/* </Provider> */}
+    </div >
   );
 }
 
