@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
 import { tsParticles } from "tsparticles-engine";
 import Mouse from "./Mouse";
-
 import { animated, useSpring } from '@react-spring/web'
+
+let points = 0;
+
 const MouseAnimation = () => {
     const widthSreen = Math.round((window.innerWidth / 3) * 2);
     const widthpage = document.documentElement.scrollWidth;
     let [point, SetPoint] = useState(0);
+
     const [springs, api] = useSpring(() => ({
         from: { x: widthpage / 2 },
     }))
     const music = new Audio('/sounds/raton.mp3')
     const musicVictory = new Audio('/sounds/victory.mp3')
-
-
 
     const handleMouseEnter = () => {
         let movRandom = (Math.round(Math.random() * 1000))
@@ -30,8 +31,6 @@ const MouseAnimation = () => {
         }
 
         setTimeout(() => {
-
-
             api.start({
                 from: {
                     x: movRandomfrom,
@@ -51,20 +50,14 @@ const MouseAnimation = () => {
 
     }
     const handleClick = () => {
+        point++;
+        SetPoint(point);
         music.play();
         // activo la música por 200 milisegundos y luego pausa
         setTimeout(() => {
             music.pause();
         }, 200);
-        let puntos = point++;
-        SetPoint(puntos);
-
     }
-
-    useEffect(() => {
-        const homewidth = document.getElementById('home').clientWidth;
-        console.log(homewidth);
-    }, []);
 
     useEffect(() => {
         if (point === 10) {

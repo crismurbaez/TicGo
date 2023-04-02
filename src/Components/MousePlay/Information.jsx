@@ -5,8 +5,8 @@ const Information = () => {
         <div >
             <div className=" bg-gray-300 w-40 p-2 rounded-full">
                 <div className=" text-center text-xs">
-                    Dale click al ratoncito y suma puntos.<br />
-                    Si llegas a 10 habrás logrado domesticarlo!!
+                    Haz click sobre el ratoncito<br />
+                    y lo atraprás al llegar a 10!!
                 </div>
             </div>
         </div>
