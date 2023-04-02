@@ -1,6 +1,6 @@
 import React from "react";
 
-const BordeRayado = () => {
+const BorderDotted = () => {
     return (
         <div>
             <div className="w-full border-2 border-dotted border-slate-400"></div>
@@ -13,4 +13,4 @@ const BordeRayado = () => {
     );
 };
 
-export default BordeRayado;
+export default BorderDotted;

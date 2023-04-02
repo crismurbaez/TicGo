@@ -13,11 +13,11 @@ const Navbar = () => {
             '/images/piedra1.png',
     }
     const navigation = [
-        { name: 'Dashboard', href: '#', current: true },
-        { name: 'Team', href: '#', current: false },
-        { name: 'Projects', href: '#', current: false },
-        { name: 'Calendar', href: '#', current: false },
-        { name: 'Reports', href: '#', current: false },
+        { name: 'Inicio', href: '/home', current: true },
+        { name: 'Proyectos', href: 'proyectos', current: false },
+        { name: 'Recursos', href: '#', current: false },
+        { name: 'Contacto', href: '#', current: false },
+        { name: 'Quienes somos', href: '#', current: false },
     ]
     const userNavigation = [
         { name: 'Your Profile', href: '#' },
