@@ -3,7 +3,6 @@ import { tsParticles } from "tsparticles-engine";
 import Mouse from "./Mouse";
 import { animated, useSpring } from '@react-spring/web'
 
-let points = 0;
 
 const MouseAnimation = () => {
     const widthSreen = Math.round((window.innerWidth / 3) * 2);
